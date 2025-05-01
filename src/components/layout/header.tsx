@@ -41,10 +41,10 @@ export const Header = () => {
                      </a>
                   </li>
                   <li>
-                     <a href="#" className="font-semibold text-lg hover:text-[var(--primary)] transition">Time</a>
+                     <a href="/team" className="font-semibold text-lg hover:text-[var(--primary)] transition">Time</a>
                   </li>
                   <li>
-                     <a href="#" className="font-semibold text-lg hover:text-[var(--primary)] transition">Loja</a>
+                     <a href="/loja" className="font-semibold text-lg hover:text-[var(--primary)] transition">Loja</a>
                   </li>
                </ul>
             </nav>
