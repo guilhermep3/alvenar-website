@@ -17,8 +17,8 @@ export default function Home() {
       <Services />
       <Marquee/>
       <Shop/>
-      <Faq/>
       <Rating/>
+      <Faq/>
       <BackTop/>
     </div>
   );
