@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/header";
 import { About } from "@/components/layout/home/about/about";
+import { Faq } from "@/components/layout/home/faq/faq";
 import { Hero } from "@/components/layout/home/hero";
 import { Services } from "@/components/layout/home/services/services";
 import { Shop } from "@/components/layout/home/shop/shop";
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <Marquee/>
       <Shop/>
+      <Faq/>
       <BackTop/>
     </div>
   );
