@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "../logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { submenu } from "@/data/submenu";
 
 export const Header = () => {
    const [active, setActive] = useState(false);
@@ -34,17 +35,24 @@ export const Header = () => {
             <Logo />
             <nav className="hidden md:block">
                <ul className="flex gap-12">
-                  <li>
-                     <a href="#" className="font-semibold text-lg hover:text-[var(--primary)] transition">
+                  <li className="relative group">
+                     <a href="#" className="font-semibold text-lg hover:text-[var(--primary)] transition group-hover:text-[var(--primary)]">
                         Início
-                        <FontAwesomeIcon icon={faChevronDown} size="1x" className="ml-4"/>
+                        <FontAwesomeIcon icon={faChevronDown} size="sm" className="ml-2" />
                      </a>
+                     <div className="absolute left-0 top-full mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50 overflow-hidden">
+                        {submenu.map((i) => (
+                           <a href={`#${i.href}`} className="block px-4 py-2 hover:bg-gray-200 hover:text-[var(--primary)]">
+                              {i.name}
+                           </a>
+                        ))}
+                     </div>
                   </li>
                   <li>
                      <a href="/team" className="font-semibold text-lg hover:text-[var(--primary)] transition">Time</a>
                   </li>
                   <li>
-                     <a href="/loja" className="font-semibold text-lg hover:text-[var(--primary)] transition">Loja</a>
+                     <a href="/shop" className="font-semibold text-lg hover:text-[var(--primary)] transition">shop</a>
                   </li>
                </ul>
             </nav>

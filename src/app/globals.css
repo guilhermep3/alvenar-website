@@ -1,10 +1,11 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #1439b1;
+  --primary: #1d44c5;
 }
 
 @theme {
@@ -12,7 +13,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --primary: #1439b1;
+  --primary: #1d44c5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,7 +22,14 @@
     --foreground: #ededed;
   }
 }
+.secondFont{
+  font-family: "Trade Winds", system-ui;
+}
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
 body {
   background: var(--background);
   color: var(--foreground);
@@ -38,10 +46,19 @@ body {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #2044bb;
+  background-color: #224edd;
   transition: all 0.3s;
   z-index: -1;
 }
 .beforeBtn:hover::after{
   width: 100%;
+}
+
+.marquee{
+  animation: marquee 30s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-100%);
+  }
 }

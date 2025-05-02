@@ -1,4 +1,33 @@
+import { faBuilding, faHouse, faScrewdriverWrench, faLeaf } from "@fortawesome/free-solid-svg-icons"
+
 export const servicesData = [
+   {
+      id: 1,
+      title: 'Projeto Arquitetônico',
+      body: 'Criamos projetos inovadores e funcionais, com foco em estética, sustentabilidade e identidade do cliente, do conceito à execução.',
+      icon: faHouse
+   },
+   {
+      id: 2,
+      title: 'Design de Interiores',
+      body: 'Transformamos espaços internos com soluções criativas e personalizadas, trazendo conforto e beleza para o ambiente.',
+      icon: faBuilding
+   },
+   {
+      id: 3,
+      title: 'Consultoria em Renovação de Espaços',
+      body: 'Oferecemos soluções estratégicas para renovação de ambientes, otimizando espaços e valorizando seu imóvel.',
+      icon: faScrewdriverWrench
+   },
+   {
+      id: 4,
+      title: 'Arquitetura Paisagista',
+      body: 'Desenvolvemos projetos paisagísticos que integram natureza e arquitetura, criando espaços ao ar livre que encantam e funcionam.',
+      icon: faLeaf
+   },
+]
+
+export const servicesData2 = [
    {
       id: 1,
       title: 'Projeto Arquitetônico',
@@ -18,28 +47,5 @@ export const servicesData = [
       id: 4,
       title: 'Arquitetura Paisagista',
       body: 'Criamos projetos paisagísticos que harmonizam a natureza com a arquitetura, utilizando plantas, texturas e formas que valorizam os espaços ao ar livre. Trabalhamos com a criação de jardins, áreas de lazer e paisagismo urbano, sempre respeitando o meio ambiente e as necessidades dos usuários.'
-   },
-]
-
-export const servicesData2 = [
-   {
-      id: 1,
-      title: 'Projeto Arquitetônico',
-      body: 'Criamos projetos inovadores e funcionais, com foco em estética, sustentabilidade e identidade do cliente, do conceito à execução.'
-   },
-   {
-      id: 2,
-      title: 'Design de Interiores',
-      body: 'Transformamos espaços internos com soluções criativas e personalizadas, trazendo conforto e beleza para o ambiente.'
-   },
-   {
-      id: 3,
-      title: 'Consultoria em Renovação de Espaços',
-      body: 'Oferecemos soluções estratégicas para renovação de ambientes, otimizando espaços e valorizando seu imóvel.'
-   },
-   {
-      id: 4,
-      title: 'Arquitetura Paisagista',
-      body: 'Desenvolvemos projetos paisagísticos que integram natureza e arquitetura, criando espaços ao ar livre que encantam e funcionam.'
    },
 ]

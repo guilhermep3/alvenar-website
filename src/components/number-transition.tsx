@@ -29,7 +29,7 @@ export const NumberTransition = ({ from, to }: props) => {
       }
 
       const observer = new IntersectionObserver(handleCheckView, {
-         threshold: 0.1
+         threshold: 0.2
       });
 
       if (numberRef.current) {
@@ -40,6 +40,6 @@ export const NumberTransition = ({ from, to }: props) => {
    }, [])
 
    return (
-      <div ref={numberRef}>{currentNumber}</div>
+      <p ref={numberRef}>{currentNumber}</p>
    )
 }
