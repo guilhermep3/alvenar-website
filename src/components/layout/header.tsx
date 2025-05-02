@@ -52,7 +52,7 @@ export const Header = () => {
                      <a href="/team" className="font-semibold text-lg hover:text-[var(--primary)] transition">Time</a>
                   </li>
                   <li>
-                     <a href="/shop" className="font-semibold text-lg hover:text-[var(--primary)] transition">shop</a>
+                     <a href="/shop" className="font-semibold text-lg hover:text-[var(--primary)] transition">Loja</a>
                   </li>
                </ul>
             </nav>

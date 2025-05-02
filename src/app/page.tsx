@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import { About } from "@/components/layout/home/about/about";
 import { Hero } from "@/components/layout/home/hero";
 import { Services } from "@/components/layout/home/services/services";
+import { Shop } from "@/components/layout/home/shop/shop";
 import { Marquee } from "@/components/layout/marquee";
 import { BackTop } from "@/components/ui/back-top";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Services />
       <Marquee/>
+      <Shop/>
       <BackTop/>
     </div>
   );

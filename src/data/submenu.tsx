@@ -8,8 +8,8 @@ export const submenu = [
       name: 'Serviços'
    },
    {
-      href: 'shop',
-      name: 'Loja'
+      href: 'products',
+      name: 'Produtos'
    },
    {
       href: 'projects',
