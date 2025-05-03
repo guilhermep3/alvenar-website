@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/header";
 import { About } from "@/components/layout/home/about/about";
 import { Faq } from "@/components/layout/home/faq/faq";
 import { Hero } from "@/components/layout/home/hero";
+import { Local } from "@/components/layout/home/local/local";
 import { Projects } from "@/components/layout/home/projects/projects";
 import { Rating } from "@/components/layout/home/rating/rating";
 import { Services } from "@/components/layout/home/services/services";
@@ -24,6 +25,7 @@ export default function Home() {
       <Projects/>
       <Rating/>
       <Faq/>
+      <Local/>
       <Footer/>
       <BackTop/>
     </div>

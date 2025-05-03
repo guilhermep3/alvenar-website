@@ -58,7 +58,7 @@ export const Footer = () => {
                   </ul>
                </div>
             </div>
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                <p className="text-sm text-zinc-300">© Copyright</p>
                <p className="text-sm text-zinc-300">Desenvolvido por <a href="https://github.com/guilhermep3" target="_blank" className="underline">Guilherme Pereira</a>
                </p>
