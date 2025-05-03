@@ -1,6 +1,6 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { A11y, EffectCube, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { ratingData } from '@/data/rating';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/effect-cube';
 import { useEffect, useState } from 'react';
 
 export default function Slide() {
@@ -26,7 +27,7 @@ export default function Slide() {
 
    return (
       <Swiper
-         modules={[Navigation, Pagination, Scrollbar, A11y]}
+         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCube]} effect="cube"
          slidesPerView={1}
          pagination={{ clickable: true }}
          navigation={!isMobile ? true : false}
@@ -45,7 +46,7 @@ export default function Slide() {
                      <div className="flex flex-col gap-2">
                         <div className="flex">
                            <div className="flex items-center">
-                              <p className="text-xl sm:text-2xl font-bold text-blue-950 mr-4">{item.name}</p>
+                              <p className="text-xl sm:text-2xl font-bold text-orange-950 mr-4">{item.name}</p>
                               <FontAwesomeIcon icon={faStar} size='lg' className='text-yellow-500 mr-1' />
                               <span className='text-xl font-bold'>{item.stars.toFixed(1)}</span>
                            </div>

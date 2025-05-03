@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import { About } from "@/components/layout/home/about/about";
 import { Faq } from "@/components/layout/home/faq/faq";
 import { Hero } from "@/components/layout/home/hero";
+import { Projects } from "@/components/layout/home/projects/projects";
 import { Rating } from "@/components/layout/home/rating/rating";
 import { Services } from "@/components/layout/home/services/services";
 import { Shop } from "@/components/layout/home/shop/shop";
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       <Marquee/>
       <Shop/>
+      <Projects/>
       <Rating/>
       <Faq/>
       <BackTop/>

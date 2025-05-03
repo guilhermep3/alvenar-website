@@ -42,7 +42,8 @@ export const Header = () => {
                      </a>
                      <div className="absolute left-0 top-full mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50 overflow-hidden">
                         {submenu.map((i) => (
-                           <a href={`#${i.href}`} className="block px-4 py-2 hover:bg-gray-200 hover:text-[var(--primary)]">
+                           <a href={`#${i.href}`} key={i.href}
+                              className="block px-4 py-2 hover:bg-gray-200 hover:text-[var(--primary)]">
                               {i.name}
                            </a>
                         ))}
