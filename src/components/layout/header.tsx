@@ -3,8 +3,9 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { Logo } from "../logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faChevronDown, faNavicon } from "@fortawesome/free-solid-svg-icons";
 import { submenu } from "@/data/submenu";
+import { MobileNavBtn } from "../mobile-nav-btn";
 
 export const Header = () => {
    const [active, setActive] = useState(false);
@@ -26,7 +27,8 @@ export const Header = () => {
    }, [])
 
    return (
-      <header className={`fixed left-0 right-0 z-50 transition-all duration-500 ${active ? 'top-0' : 'top-6'}`}>
+      <header className={`fixed left-0 right-0 z-50 transition-all duration-500
+         ${active ? 'top-0 sm:top-1' : 'top-6'}`}>
          <div className={`relative container mx-auto flex items-center justify-between px-6 py-4 transition-all duration-500
             ${active ? 'backdrop-blur-md sm:backdrop-blur-none bg-zinc-900/50 sm:bg-transparent' : 'backdrop-blur-none'}
             `}>
@@ -57,10 +59,15 @@ export const Header = () => {
                   </li>
                </ul>
             </nav>
-            <Button label="Contato" size={1}
-               link="#"
-               icon={<FontAwesomeIcon icon={faArrowRight} />}
-            />
+            <div className="flex items-center gap-2">
+               <Button label="Contato" size={1}
+                  link="#"
+                  icon={<FontAwesomeIcon icon={faArrowRight} />}
+               />
+               <div className="block sm:hidden">
+                  <MobileNavBtn />
+               </div>
+            </div>
          </div>
       </header>
    );
