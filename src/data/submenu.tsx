@@ -20,16 +20,12 @@ export const submenu = [
       name: 'Avaliação'
    },
    {
-      href: 'team',
-      name: 'Time'
+      href: 'faq',
+      name: 'FAQ'
    },
    {
       href: 'contact',
       name: 'Contato'
-   },
-   {
-      href: 'faq',
-      name: 'FAQ'
    },
    {
       href: 'local',

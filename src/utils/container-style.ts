@@ -1,1 +1,1 @@
-export const containerStyle = "container mx-auto px-4 py-10 sm:py-20"
+export const containerStyle = "container mx-auto px-4 py-10 sm:py-16"

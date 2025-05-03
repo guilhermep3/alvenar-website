@@ -1,5 +1,5 @@
 type props = {
-   height: any;
+   height: string;
    topOrBottom: 'top' | 'bottom';
 }
 export const WoodenBand = ({ height, topOrBottom }: props) => {

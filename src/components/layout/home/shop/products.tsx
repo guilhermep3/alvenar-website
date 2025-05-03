@@ -2,21 +2,21 @@ import { containerStyle } from "@/utils/container-style"
 import { ProductItem } from "./product-item"
 import { TitleSection } from "../title-section"
 import { SubtitleSection } from "../subititle-section"
-import { armchairProducts, productsByCategory, sofaProducts } from "@/utils/category-products"
+import { armchairProducts, sofaProducts } from "@/utils/category-products"
 import { Button } from "@/components/ui/button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
-export const Shop = () => {
+export const Products = () => {
 
    return (
-      <section id="shop" className="bg-zinc-100 p-4 py-10 sm:py-20">
-         <div className={containerStyle + ' flex flex-col sm:flex-row gap-10'}>
+      <section id="products" className="bg-zinc-100 p-4 py-10 sm:py-20">
+         <div className={containerStyle + ' flex flex-col lg:flex-row gap-10'}>
             <div className="flex flex-col max-w-lg">
                <SubtitleSection label="Loja" className="text-black" />
                <TitleSection label="Nossos produtos" className="text-black" />
-               <p className="text-black/90 mt-4 mb-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque nihil hic nulla culpa, 
-                  architecto repellendus soluta quas illo illum rem consectetur veritatis ratione ullam, omnis 
+               <p className="text-black/90 mt-4 mb-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque nihil hic nulla culpa,
+                  architecto repellendus soluta quas illo illum rem consectetur veritatis ratione ullam, omnis
                   minus numquam laboriosam ea maxime?
                </p>
                <Button label="Ver todos"

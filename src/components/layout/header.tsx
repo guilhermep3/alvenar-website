@@ -50,7 +50,7 @@ export const Header = () => {
                      </div>
                   </li>
                   <li>
-                     <a href="/team" className="font-semibold text-lg hover:text-[var(--primary)] transition">Time</a>
+                     <a href="/about" className="font-semibold text-lg hover:text-[var(--primary)] transition">Sobre</a>
                   </li>
                   <li>
                      <a href="/shop" className="font-semibold text-lg hover:text-[var(--primary)] transition">Loja</a>

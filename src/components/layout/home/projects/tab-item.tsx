@@ -1,9 +1,10 @@
+import { project } from "@/types/projects";
 import { faExpand, faLocationDot } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 
 type props = {
-   item: any;
+   item: project;
 }
 export const TabItem = ({item}: props) => {
 
