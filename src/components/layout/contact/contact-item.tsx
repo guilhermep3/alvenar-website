@@ -1,22 +1,26 @@
 "use client"
+import { useToastStore } from "@/store/toast-store";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 type props = {
    label: string;
    icon: IconProp;
 }
 export const ContactItem = ({ label, icon }: props) => {
+   const { open } = useToastStore();
 
-   function onClick(text: string) {
-
+   function copyText(text: string) {
+      navigator.clipboard.writeText(text);
+      open(text);
    }
 
    return (
       <div
          className="flex gap-2 sm:gap-4 items-center p-3 border border-zinc-400 rounded-lg w-full cursor-pointer hover:border-zinc-800 transition"
-         onClick={() => onClick(label)}
+         onClick={() => copyText(label)}
          title="Copiar"
       >
          <FontAwesomeIcon icon={icon}

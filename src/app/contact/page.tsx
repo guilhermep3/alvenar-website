@@ -3,6 +3,7 @@ import { FormContact } from "@/components/layout/contact/form";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { TitleSection } from "@/components/layout/home/title-section";
+import { Toast } from "@/components/toast";
 import { containerStyle } from "@/utils/container-style";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,8 +11,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Page() {
 
    return (
-      <div id="contact" className="bg-zinc-100 min-h-screen">
+      <div id="contact" className="bg-zinc-100 min-h-screen relative">
          <Header />
+         <Toast/>
          <div className="bg-zinc-800 w-full h-[240px] sm:h-[300px] flex justify-center items-end pb-6 sm:pb-10">
             <TitleSection label="Entre em contato" className="text-center" />
          </div>

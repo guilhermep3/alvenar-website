@@ -1,5 +1,5 @@
 "use client"
-import { usemobileNavStore } from "@/utils/mobile-nav-store";
+import { usemobileNavStore } from "@/store/mobile-nav-store";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
