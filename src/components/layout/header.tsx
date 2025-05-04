@@ -36,7 +36,7 @@ export const Header = () => {
    }, [])
 
    return (
-      <header className={`fixed left-0 right-0 z-50 transition-all duration-500
+      <header className={`fixed left-0 right-0 z-50 transition-all duration-500 text-white
          ${active ? 'top-0 sm:top-1' : 'top-6'}`}>
          <div className={`relative container mx-auto flex items-center justify-between px-6 py-4 transition-all duration-500
             ${active ? 'backdrop-blur-md sm:backdrop-blur-none bg-zinc-900/50 sm:bg-transparent' : 'backdrop-blur-none'}

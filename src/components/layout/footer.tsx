@@ -9,7 +9,7 @@ import { faX } from "@fortawesome/free-solid-svg-icons"
 export const Footer = () => {
 
    return (
-      <footer className="bg-zinc-800">
+      <footer className="bg-zinc-800 text-white">
          <div className={containerStyle + ' flex flex-col justify-center items-center gap-14'}>
             <div className="flex flex-col sm:flex-row justify-between w-full gap-10">
                <div className="flex-1 flex flex-col justify-center items-start gap-4">

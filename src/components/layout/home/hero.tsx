@@ -33,7 +33,7 @@ export function Hero() {
    }, []);
 
    return (
-      <div id='hero' className="relative w-full h-screen overflow-hidden">
+      <div id='hero' className="relative w-full h-screen overflow-hidden text-white">
          {images.map((src, index) => (
             <div key={index}
                className={`absolute flex min-w-full min-h-full bg-center bg-cover transition duration-1000
