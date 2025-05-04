@@ -1,3 +1,7 @@
+"use client"
+import AOS from "aos"
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 import { product } from "@/types/product"
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -7,8 +11,16 @@ type props = {
    product: product;
 }
 export const ProductItem = ({ product }: props) => {
+   useEffect(() => {
+      AOS.init({
+         duration: 1000,
+         once: true,
+         delay: 100,
+      });
+   }, []);
+
    return (
-      <div className="cardProduct relative flex flex-col gap-2 p-4 rounded-xl overflow-hidden w-fit bg-white text-black shadow-lg z-10 border border-zinc-300 cursor-pointer">
+      <div data-aos="fade-up" className="cardProduct relative flex flex-col gap-2 p-4 rounded-xl overflow-hidden w-fit bg-white text-black shadow-lg z-10 border border-zinc-300 cursor-pointer">
          <Image src={`/shop/${product.image}`} alt="sofa1" width={200} height={200} />
          <div className="flex flex-col">
             <p className="text-lg font-bold">{product.name}</p>

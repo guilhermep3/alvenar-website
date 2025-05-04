@@ -1,14 +1,23 @@
 "use client"
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
-import { Logo } from "../logo";
+import { Logo } from "../ui/logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChevronDown, faNavicon } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { submenu } from "@/data/submenu";
-import { MobileNavBtn } from "../mobile-nav-btn";
+import { MobileNavBtn } from "../ui/mobile-nav-btn";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Header = () => {
    const [active, setActive] = useState(false);
+   
+   useEffect(() => {
+      AOS.init({
+         duration: 1000,
+         once: true,
+      });
+   }, []);
 
    useEffect(() => {
       const handleScroll = () => {
@@ -35,7 +44,7 @@ export const Header = () => {
             <div className={`absolute top-0 left-0 right-0 hidden md:block mx-auto h-full -z-10 transition-all rounded-3xl duration-500 ease-in-out
                ${active ? 'w-full bg-zinc-900/50 backdrop-blur-md' : 'w-1/3 bg-gray-600/80'}`}></div>
             <Logo />
-            <nav className="hidden md:block">
+            <nav data-aos="zoom-in" className="hidden md:block">
                <ul className="flex gap-12">
                   <li className="relative group">
                      <a href="/" className="font-semibold text-lg hover:text-[var(--primary)] transition group-hover:text-[var(--primary)]">

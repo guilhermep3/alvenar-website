@@ -3,10 +3,9 @@ import { FormContact } from "@/components/layout/contact/form";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { TitleSection } from "@/components/layout/home/title-section";
-import { Toast } from "@/components/toast";
+import { Toast } from "@/components/ui/toast";
 import { containerStyle } from "@/utils/container-style";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Page() {
 

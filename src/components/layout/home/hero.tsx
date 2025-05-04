@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { containerStyle } from '@/utils/container-style';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const images = [
    'bg1.jpg',
@@ -14,6 +16,13 @@ const images = [
 
 export function Hero() {
    const [currentIndex, setCurrentIndex] = useState(0);
+
+   useEffect(() => {
+      AOS.init({
+         duration: 1000,
+         once: true,
+      });
+   }, []);
 
    useEffect(() => {
       const interval = setInterval(() => {
@@ -34,12 +43,14 @@ export function Hero() {
          ))}
          <div className="absolute z-30 top-0 left-0 w-full h-full flex items-center justify-center bg-zinc-900/50">
             <div className={containerStyle + " w-full max-w-5xl text-start"}>
-               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase mb-4">Projetando espaços com propósito</h1>
-               <h2 className="text-base sm:text-lg mt-5 mb-10">
+               <h1 data-aos="zoom-in" className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase mb-4">Projetando espaços com propósito</h1>
+               <h2 data-aos="zoom-in" className="text-base sm:text-lg mt-5 mb-10">
                   Bem-vindo à Alvenar Architecture, onde criatividade, precisão e sustentabilidade se unem para
                   projetar espaços excepcionais que inspiram, perduram e redefinem o futuro da arquitetura.
                </h2>
-               <Button label="Contato" size={1}
+               <Button 
+                  label="Contato"
+                  size={1}
                   link="#"
                   icon={<FontAwesomeIcon icon={faArrowRight} />}
                />

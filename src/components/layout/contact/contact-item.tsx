@@ -3,7 +3,6 @@ import { useToastStore } from "@/store/toast-store";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
 
 type props = {
    label: string;
@@ -30,7 +29,7 @@ export const ContactItem = ({ label, icon }: props) => {
          <p className="text-base sm:text-lg font-semibold">{label}</p>
          <FontAwesomeIcon icon={faCopy}
             size="2x"
-            className="size-4 sm:size-6 ml-auto"
+            className="size-4 sm:size-6 ml-auto text-zinc-800"
          />
       </div>
    )

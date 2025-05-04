@@ -2,7 +2,7 @@ import { containerStyle } from "@/utils/container-style"
 import { faFacebook, faInstagram, faLinkedin, faTiktok } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
-import { Logo } from "@/components/logo"
+import { Logo } from "@/components/ui/logo"
 import { Button } from "@/components/ui/button"
 import { faX } from "@fortawesome/free-solid-svg-icons"
 
