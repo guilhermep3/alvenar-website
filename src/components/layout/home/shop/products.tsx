@@ -1,5 +1,5 @@
 import { containerStyle } from "@/utils/container-style"
-import { ProductItem } from "./product-item"
+import { ProductItem } from "../../../ui/product-item"
 import { TitleSection } from "../title-section"
 import { SubtitleSection } from "../subititle-section"
 import { armchairProducts, sofaProducts } from "@/utils/category-products"

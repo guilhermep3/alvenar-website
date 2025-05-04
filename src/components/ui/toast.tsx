@@ -14,11 +14,14 @@ export const Toast = () => {
       }
    }, [isOpen, close]);
 
-   if (!isOpen) return null;
 
    return (
-      <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-lg text-black px-4 py-2 rounded-lg shadow-lg z-50 transition">
-         {text} <span className="text-black/80">copiado</span>
+      <div className={`fixed left-1/2 bottom-6 transform -translate-x-1/2 min-w-52 bg-white text-sm sm:text-base text-black 
+         px-4 py-2 rounded-lg border border-zinc-400 shadow-lg z-50 transition duration-300
+         ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}
+      >
+         <p>Texto copiado</p>
+         <p className="text-black/80">{text}</p>
       </div>
    );
 };

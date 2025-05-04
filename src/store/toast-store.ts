@@ -10,6 +10,11 @@ type toastType = {
 export const useToastStore = create<toastType>((set) => ({
    isOpen: false,
    text: "",
-   open: (text: string) => set({isOpen: true, text}),
-   close: () => set({isOpen: false, text: ''})
+   open: (text: string) => set({ isOpen: true, text }),
+   close: () => {
+      set({ isOpen: false });
+      setTimeout(() => {
+         set({ text: '' })
+      }, 200);
+   }
 }))

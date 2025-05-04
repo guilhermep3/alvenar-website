@@ -9,7 +9,7 @@ type props = {
    icon: IconProp;
 }
 export const ContactItem = ({ label, icon }: props) => {
-   const { open } = useToastStore();
+   const { open, isOpen, text } = useToastStore();
 
    function copyText(text: string) {
       navigator.clipboard.writeText(text);
@@ -18,7 +18,9 @@ export const ContactItem = ({ label, icon }: props) => {
 
    return (
       <div
-         className="flex gap-2 sm:gap-4 items-center p-3 border border-zinc-400 rounded-lg w-full cursor-pointer hover:border-zinc-800 transition"
+         className={`flex gap-2 sm:gap-4 items-center p-3 border rounded-lg w-full cursor-pointer hover:border-zinc-800 transition
+            ${isOpen  && text === label ? 'border-[var(--primary)]' : 'border-zinc-400'}
+            `}
          onClick={() => copyText(label)}
          title="Copiar"
       >
@@ -29,7 +31,7 @@ export const ContactItem = ({ label, icon }: props) => {
          <p className="text-base sm:text-lg font-semibold">{label}</p>
          <FontAwesomeIcon icon={faCopy}
             size="2x"
-            className="size-4 sm:size-6 ml-auto text-zinc-800"
+            className="size-3 sm:size-5 ml-auto text-zinc-500"
          />
       </div>
    )
