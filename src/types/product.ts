@@ -6,3 +6,12 @@ export type product = {
    image: string;
    price: number;
 }
+
+export const emptyProduct: product = {
+   id: 1,
+   name: '',
+   description: '',
+   category: '',
+   image: '',
+   price: 0
+}

@@ -1,13 +1,16 @@
 "use client"
 import { ProductItem } from "@/components/ui/product-item"
 import { products } from "@/data/products"
+import { product } from "@/types/product";
 
 type props = {
    selectedCategories: string[];
    selectedPrices: string[];
+   setIsOpen: () => void;
+   setProductModal: (newP: product) => void;
 }
 
-export const MainShop = ({ selectedCategories, selectedPrices }: props) => {
+export const MainShop = ({ selectedCategories, selectedPrices, setIsOpen, setProductModal }: props) => {
    const filteredProducts = products.filter((product) => {
 
       const matchesCategory =
@@ -27,7 +30,12 @@ export const MainShop = ({ selectedCategories, selectedPrices }: props) => {
          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8">
             {filteredProducts.length > 0 ? (
                filteredProducts.map((product) => (
-                  <ProductItem key={product.id} product={product} />
+                  <ProductItem key={product.id}
+                     product={product}
+                     haveModal={true}
+                     setIsOpen={setIsOpen}
+                     onClick={() => setProductModal(product)}
+                  />
                ))
             ) : (
                <p className="col-span-full text-center text-gray-500">

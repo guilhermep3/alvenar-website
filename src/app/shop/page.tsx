@@ -4,6 +4,8 @@ import { Header } from "@/components/layout/header";
 import { TitleSection } from "@/components/layout/home/title-section";
 import { AsideShop } from "@/components/layout/shop/aside-shop";
 import { MainShop } from "@/components/layout/shop/main-shop";
+import { Modal } from "@/components/modal";
+import { emptyProduct, product } from "@/types/product";
 import { containerStyle } from "@/utils/container-style";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +14,8 @@ import { useState } from "react";
 export default function Page() {
    const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
    const [selectedPrices, setSelectedPrices] = useState<string[]>([]);
+   const [isOpen, setIsOpen] = useState<boolean>(false);
+   const [productModal, setProductModal] = useState<product>(emptyProduct);
 
    return (
       <div id="shop" className="bg-zinc-100 min-h-screen relative">
@@ -34,12 +38,18 @@ export default function Page() {
                   <MainShop
                      selectedCategories={selectedCategories}
                      selectedPrices={selectedPrices}
+                     setIsOpen={() => setIsOpen(true)}
+                     setProductModal={setProductModal}
                   />
-
                </div>
             </div>
          </div>
          <Footer />
+         <Modal
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            productModal={productModal}
+         />
       </div>
    )
 }

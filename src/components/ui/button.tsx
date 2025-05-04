@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 type props = {
    label: string;
-   link: string;
+   link?: string;
    icon?: ReactNode;
    size: 1 | 2 | 3;
 }
