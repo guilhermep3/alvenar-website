@@ -1,5 +1,9 @@
 export const submenu = [
    {
+      href: 'hero',
+      name: 'Início'
+   },
+   {
       href: 'about',
       name: 'Sobre'
    },
@@ -22,10 +26,6 @@ export const submenu = [
    {
       href: 'faq',
       name: 'FAQ'
-   },
-   {
-      href: 'contact',
-      name: 'Contato'
    },
    {
       href: 'local',

@@ -1,9 +1,10 @@
 import { containerStyle } from "@/utils/container-style"
-import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faFacebook, faInstagram, faLinkedin, faTiktok } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
-import { Logo } from "./logo"
-import { Button } from "./ui/button"
+import { Logo } from "@/components/logo"
+import { Button } from "@/components/ui/button"
+import { faX } from "@fortawesome/free-solid-svg-icons"
 
 export const Footer = () => {
 
@@ -37,22 +38,22 @@ export const Footer = () => {
                   <p className="text-lg font-bold mb-4">Redes sociais</p>
                   <ul className="flex flex-col gap-2">
                      <li className="hover:underline w-fit">
-                        <Link href={'#'} className="flex gap-2">
-                           <FontAwesomeIcon icon={faInstagram} size="1x" className="text-[var(--primary)]" />Instagram</Link>
+                        <Link href={'#'} className="flex gap-2 items-center">
+                           <FontAwesomeIcon icon={faFacebook} size="1x" className="text-[var(--primary)]" />Facebook</Link>
                      </li>
                      <li className="hover:underline w-fit">
-                        <Link href={'#'} className="flex gap-2">
-                           <FontAwesomeIcon icon={faFacebook} size="1x" className="text-[var(--primary)]" />Facebook
-                        </Link>
-                     </li>
-                     <li className="hover:underline w-fit">
-                        <Link href={'#'} className="flex gap-2">
+                        <Link href={'#'} className="flex gap-2 items-center">
                            <FontAwesomeIcon icon={faInstagram} size="1x" className="text-[var(--primary)]" />Instagram
                         </Link>
                      </li>
                      <li className="hover:underline w-fit">
-                        <Link href={'#'} className="flex gap-2">
-                           <FontAwesomeIcon icon={faInstagram} size="1x" className="text-[var(--primary)]" />Instagram
+                        <Link href={'#'} className="flex gap-2 items-center">
+                           <FontAwesomeIcon icon={faTiktok} size="1x" className="text-[var(--primary)]" />Tiktok
+                        </Link>
+                     </li>
+                     <li className="hover:underline w-fit">
+                        <Link href={'#'} className="flex gap-2 items-center">
+                           <FontAwesomeIcon icon={faX} size="1x" className="text-[var(--primary)]" />Twitter
                         </Link>
                      </li>
                   </ul>

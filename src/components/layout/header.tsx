@@ -38,7 +38,7 @@ export const Header = () => {
             <nav className="hidden md:block">
                <ul className="flex gap-12">
                   <li className="relative group">
-                     <a href="#" className="font-semibold text-lg hover:text-[var(--primary)] transition group-hover:text-[var(--primary)]">
+                     <a href="/" className="font-semibold text-lg hover:text-[var(--primary)] transition group-hover:text-[var(--primary)]">
                         Início
                         <FontAwesomeIcon icon={faChevronDown} size="sm" className="ml-2" />
                      </a>
@@ -61,7 +61,7 @@ export const Header = () => {
             </nav>
             <div className="flex items-center gap-2">
                <Button label="Contato" size={1}
-                  link="#"
+                  link="/contact"
                   icon={<FontAwesomeIcon icon={faArrowRight} />}
                />
                <div className="block sm:hidden">
