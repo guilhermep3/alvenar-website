@@ -34,9 +34,9 @@ export const AsideShop = ({selectedCategories, selectedPrices, setSelectedCatego
                   <AsideItem
                      key={i.id}
                      label={i.name}
-                     checked={selectedCategories.includes(i.name)}
+                     checked={selectedCategories.includes(i.slug)}
                      onChange={(checked) =>
-                        toggleItem(selectedCategories, setSelectedCategories, i.name, checked)
+                        toggleItem(selectedCategories, setSelectedCategories, i.slug, checked)
                      }
                   />
                ))}
@@ -47,9 +47,9 @@ export const AsideShop = ({selectedCategories, selectedPrices, setSelectedCatego
                   <AsideItem
                      key={i.id}
                      label={i.name}
-                     checked={selectedPrices.includes(i.name)}
+                     checked={selectedPrices.includes(i.slug)}
                      onChange={(checked) =>
-                        toggleItem(selectedPrices, setSelectedPrices, i.name, checked)
+                        toggleItem(selectedPrices, setSelectedPrices, i.slug, checked)
                      }
                   />
                ))}

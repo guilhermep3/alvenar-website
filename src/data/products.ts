@@ -7,7 +7,7 @@ export const products: product[] = [
       description: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
       category: 'Sofa',
       image: 'sofa1.jpg',
-      price: 275.50
+      price: 375.50
    },
    {
       id: 2,
@@ -15,7 +15,7 @@ export const products: product[] = [
       description: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
       category: 'Sofa',
       image: 'sofa2.jpg',
-      price: 252.75
+      price: 345.75
    },
    {
       id: 3,
@@ -23,7 +23,7 @@ export const products: product[] = [
       description: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
       category: 'Sofa',
       image: 'sofa3.jpg',
-      price: 336.90
+      price: 462.90
    },
    {
       id: 4,
@@ -31,7 +31,7 @@ export const products: product[] = [
       description: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
       category: 'Sofa',
       image: 'sofa4.jpg',
-      price: 301.10
+      price: 410.10
    },
    {
       id: 5,
@@ -39,7 +39,7 @@ export const products: product[] = [
       description: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
       category: 'Armchair',
       image: 'poltrona1.jpg',
-      price: 164.90
+      price: 185.90
    },
    {
       id: 6,
@@ -47,6 +47,22 @@ export const products: product[] = [
       description: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
       category: 'Armchair',
       image: 'poltrona2.jpg',
-      price: 164.90
+      price: 250.90
+   },
+   {
+      id: 7,
+      name: 'Poltrona 3',
+      description: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
+      category: 'Armchair',
+      image: 'poltrona3.jpg',
+      price: 210.50
+   },
+   {
+      id: 8,
+      name: 'Poltrona 4',
+      description: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
+      category: 'Armchair',
+      image: 'poltrona4.jpg',
+      price: 240.50
    },
 ]

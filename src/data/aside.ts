@@ -2,12 +2,12 @@ export const AsideCategory = [
    {
       id: 1,
       name: 'Sofá',
-      slug: 'Sofá'
+      slug: 'Sofa'
    },
    {
       id: 2,
       name: 'Poltrona',
-      slug: 'Poltrona'
+      slug: 'Armchair'
    },
 ]
 
