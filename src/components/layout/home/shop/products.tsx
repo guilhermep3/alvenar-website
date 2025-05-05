@@ -20,7 +20,7 @@ export const Products = () => {
                   minus numquam laboriosam ea maxime?
                </p>
                <Button label="Ver todos"
-                  link="/"
+                  link="/shop"
                   size={1}
                   icon={<FontAwesomeIcon icon={faArrowRight} />}
                />
@@ -29,10 +29,16 @@ export const Products = () => {
                <div className="text-2xl sm:text-3xl font-bold text-center">Os 3 produtos <span className="text-[var(--primary)]">mais vendidos</span></div>
                <div className="flex-1 flex flex-col sm:flex-row justify-center items-center mx-auto gap-6">
                   {sofaProducts.slice(0, 2).map((p) => (
-                     <ProductItem product={p} key={p.id} haveModal={false} />
+                     <ProductItem key={p.id}
+                        product={p}
+                        haveModal={false}
+                     />
                   ))}
                   {armchairProducts.slice(0, 1).map((p) => (
-                     <ProductItem product={p} key={p.id} haveModal={false} />
+                     <ProductItem key={p.id}
+                        product={p}
+                        haveModal={false}
+                     />
                   ))}
                </div>
             </div>

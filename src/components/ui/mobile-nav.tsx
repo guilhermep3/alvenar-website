@@ -14,8 +14,8 @@ export const MobileNav = () => {
          </button>
          <div className="flex flex-col gap-6">
             <a href="/" onClick={close} className="hover:text-[var(--primary)] font-bold">Início</a>
-            <a href="/about" onClick={close} className="hover:text-[var(--primary)] font-bold">Sobre</a>
             <a href="/shop" onClick={close} className="hover:text-[var(--primary)] font-bold">Loja</a>
+            <a href="/contact" onClick={close} className="hover:text-[var(--primary)] font-bold">Contato</a>
          </div>
       </div>
    );

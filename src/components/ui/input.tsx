@@ -10,7 +10,7 @@ export const Input = ({ type = "text", id, placeholder, ...rest }: InputProps) =
          type={type}
          id={id}
          placeholder={placeholder}
-         className="w-full bg-white p-3 sm:p-4 rounded-lg border border-zinc-500 mb-2"
+         className="w-full bg-white p-2 sm:p-3 rounded-lg border border-zinc-500 my-1"
          {...rest}
       />
    );

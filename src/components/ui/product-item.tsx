@@ -10,8 +10,8 @@ import Image from "next/image"
 type props = {
    product: product;
    haveModal: boolean;
-   setIsOpen: () => void;
-   onClick: () => void;
+   setIsOpen?: () => void;
+   onClick?: () => void;
 }
 export const ProductItem = ({ product, setIsOpen, onClick }: props) => {
    useEffect(() => {
@@ -23,8 +23,10 @@ export const ProductItem = ({ product, setIsOpen, onClick }: props) => {
    }, []);
 
    function handleProductClicked() {
-      setIsOpen();
-      onClick();
+      if (onClick && setIsOpen) {
+         setIsOpen();
+         onClick();
+      }
    };
 
    return (

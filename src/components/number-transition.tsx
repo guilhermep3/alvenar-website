@@ -22,7 +22,7 @@ export const NumberTransition = ({ from, to }: props) => {
                      return prev;
                   }
                })
-            }, 100);
+            }, 80);
 
             return () => clearInterval(interval);
          }
