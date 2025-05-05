@@ -9,11 +9,12 @@ import { modalCloseStyle, modalOpenStyle, modalStyle } from "@/utils/styles";
 type props = {
 }
 export const ModalCart = ({ }: props) => {
-   const { isModalOpen, setIsModalOpen, setIsCheckoutOpen } = useCartStore();
+   const { isModalOpen, setIsModalOpen, setIsCheckoutOpen, cart } = useCartStore();
 
    function handleBuyProducts() {
-      setIsCheckoutOpen(true);
-      // setIsModalOpen(false);
+      if (cart.length > 0) {
+         setIsCheckoutOpen(true);
+      }
    }
 
    return (
@@ -32,7 +33,7 @@ export const ModalCart = ({ }: props) => {
                <CartItem />
             </ul>
             <CartPrice />
-            <div>
+            <div className={`${cart.length > 0 ? '' : 'opacity-50'}`}>
                <Button label="Comprar"
                   size={1}
                   wFull

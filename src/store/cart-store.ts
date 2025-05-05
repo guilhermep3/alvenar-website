@@ -14,7 +14,7 @@ type CartStoreType = {
 export const useCartStore = create<CartStoreType>((set) => ({
    cart: [],
    isModalOpen: false,
-   isCheckoutOpen: true,
+   isCheckoutOpen: false,
    upsertCartItem: (product: product, quantity: number) => set((state) => {
       let newCart = state.cart;
       let productIndex = newCart.findIndex((p) => p.product.id === product.id);
@@ -34,5 +34,5 @@ export const useCartStore = create<CartStoreType>((set) => ({
       return { cart: newCart };
    }),
    setIsModalOpen: (newValue: boolean) => set({ isModalOpen: newValue }),
-   setIsCheckoutOpen: (newValue: boolean) => set({ isCheckoutOpen: newValue})
+   setIsCheckoutOpen: (newValue: boolean) => set({ isCheckoutOpen: newValue })
 }))

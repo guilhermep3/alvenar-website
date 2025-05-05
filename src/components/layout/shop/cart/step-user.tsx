@@ -5,6 +5,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useCheckoutStore } from "@/store/checkout-store";
 
 const formSchema = z.object({
    name: z.string().min(2, 'Preencha seu nome'),
@@ -14,15 +15,17 @@ type props = {
    setCurrentStep: (newValue: steps) => void;
 }
 export const StepUser = ({ setCurrentStep }: props) => {
+   const { setName, setEmail } = useCheckoutStore();
    const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: { name: '', email: '' }
    });
-   const { register, formState: { errors } } = form
+   const { register, formState: { errors } } = form;
 
    function onSubmit(values: z.infer<typeof formSchema>) {
-      // setName(values.name)
-      setCurrentStep('address')
+      setName(values.name);
+      setEmail(values.email);
+      setCurrentStep('address');
    }
 
    const ErrorMessage = ({ message }: { message?: string }) => {

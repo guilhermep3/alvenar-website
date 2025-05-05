@@ -49,7 +49,7 @@ export const ModalProduct = ({ isOpen, setIsOpen, productModal }: props) => {
                         onClick={() => setQuantity((prev) => prev + 1)}
                      />
                   </div>
-                  <button className={`beforeBtn relative font-semibold bg-[var(--primary)] rounded-xl cursor-pointer 
+                  <button className={`beforeBtn relative font-semibold bg-[var(--primary)] rounded-xl cursor-pointer text-white
                      flex items-center gap-4  overflow-hidden z-30 py-3 px-6 sm:py-4 sm:px-10 text-lg`}
                      onClick={handleAddProduct}
                   >

@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
+import { ModalContact } from "./modal-contaxt";
 
 const registerSchema = z.object({
    name: z.string().min(2, "Nome inválido"),
@@ -14,9 +15,15 @@ const registerSchema = z.object({
    number: z.string().min(9, 'Número inválido'),
    message: z.string().min(10, "Descreva melhor o seu projeto")
 })
+type FormData = z.infer<typeof registerSchema>;
 export const FormContact = () => {
-   const [formData, setFormData] = useState<any>(null);
-   const methods = useForm<z.infer<typeof registerSchema>>({
+   const [formData, setFormData] = useState<FormData>({
+      name: '',
+      email: '',
+      number: '',
+      message: ''
+   });
+   const methods = useForm<FormData>({
       resolver: zodResolver(registerSchema),
       defaultValues: {
          name: '',
@@ -25,17 +32,29 @@ export const FormContact = () => {
          message: ''
       }
    });
-   const { register, handleSubmit, formState: { errors } } = methods;
+   const { register, handleSubmit, formState: { errors }, reset } = methods;
+   const [isOpen, setIsOpen] = useState(true);
 
-   function onSubmit(data: z.infer<typeof registerSchema>) {
+   function onSubmit(data: FormData) {
       setFormData(data)
-      console.log(data)
+      setIsOpen(true)
    }
 
    const ErrorMessage = ({ message }: { message?: string }) => {
       return message ? (
          <p className="text-red-500 text-sm">{message}</p>
       ) : null;
+   }
+
+   function handleCloseModal() {
+      setFormData({
+         name: '',
+         email: '',
+         number: '',
+         message: ''
+      })
+      reset();
+      setIsOpen(false);
    }
 
    return (
@@ -87,6 +106,7 @@ export const FormContact = () => {
                </button>
             </div>
          </form>
+         <ModalContact name={formData.name} isOpen={isOpen} setIsOpen={handleCloseModal} />
       </FormProvider>
    )
 }

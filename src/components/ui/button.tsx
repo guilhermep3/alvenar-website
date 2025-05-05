@@ -20,12 +20,9 @@ export const Button = ({ label, link, size, icon, wFull, onClick }: props) => {
       });
    }, []);
 
-   function handleBtnClicked() {
-      if (onClick) return onClick;
-   }
 
    return link ? (
-      <Link href={`${link}`} className="w-fit" data-aos="zoom-in" onClick={handleBtnClicked}>
+      <Link href={`${link}`} className="w-fit" data-aos="zoom-in">
          <button className={`beforeBtn relative font-semibold bg-[var(--primary)] rounded-xl cursor-pointer flex
             justify-center items-center gap-4 overflow-hidden z-30 text-white
             ${size === 1 && 'py-3 px-6 sm:py-4 sm:px-10 text-lg'}
@@ -45,6 +42,7 @@ export const Button = ({ label, link, size, icon, wFull, onClick }: props) => {
          ${size === 3 && 'py-2 px-4 text-base'}
          ${wFull && 'w-full'}
          `}
+         onClick={onClick}
       >
          {label} {icon}
       </button>

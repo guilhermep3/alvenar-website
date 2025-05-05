@@ -19,7 +19,7 @@ export const ContactItem = ({ label, icon }: props) => {
    return (
       <div
          className={`flex gap-2 sm:gap-4 items-center p-3 border rounded-lg w-full cursor-pointer hover:border-zinc-800 transition
-            ${isOpen  && text === label ? 'border-[var(--primary)]' : 'border-zinc-400'}
+            ${isOpen && text === label ? 'border-[var(--primary)]' : 'border-zinc-400'}
             `}
          onClick={() => copyText(label)}
          title="Copiar"
