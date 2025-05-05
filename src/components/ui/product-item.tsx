@@ -37,8 +37,8 @@ export const ProductItem = ({ product, setIsOpen, onClick }: props) => {
          <div className="flex flex-col">
             <p className="text-lg font-bold">{product.name}</p>
             <div className="flex justify-between items-end ">
-               <p className="text-xl font-extrabold">R$ {product.price.toFixed(2)}</p>
-               <button className="size-8 rounded-full bg-black text-white group-hover:bg-[var(--primary)] transition cursor-pointer flex justify-center items-center">
+               <p className="text-base sm:text-xl font-extrabold">R$ {product.price.toFixed(2)}</p>
+               <button className="size-7 sm:size-8 rounded-full bg-black text-white group-hover:bg-[var(--primary)] transition cursor-pointer flex justify-center items-center">
                   <FontAwesomeIcon icon={faPlus} />
                </button>
             </div>

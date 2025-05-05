@@ -3,10 +3,11 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const CartIcon = () => {
-   const { cart } = useCartStore();
+   const { cart, setIsModalOpen } = useCartStore();
 
    return (
-      <div className="relative ml-auto bg-[var(--primary)] size-10 flex justify-center items-center rounded-md cursor-pointer">
+      <div className="relative ml-auto bg-[var(--primary)] size-10 flex justify-center items-center rounded-md cursor-pointer"
+         onClick={() => setIsModalOpen(true)}>
          <FontAwesomeIcon
             icon={faCartShopping}
             size="1x"

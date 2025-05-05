@@ -27,7 +27,7 @@ export const MainShop = ({ selectedCategories, selectedPrices, setIsOpen, setPro
 
    return (
       <main className="flex-1 mx-auto p-2 sm:p-6 border border-zinc-300">
-         <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8">
+         <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-8">
             {filteredProducts.length > 0 ? (
                filteredProducts.map((product) => (
                   <ProductItem key={product.id}

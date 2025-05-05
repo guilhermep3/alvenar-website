@@ -3,13 +3,14 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { TitleSection } from "@/components/layout/home/title-section";
 import { AsideShop } from "@/components/layout/shop/aside-shop";
-import { CartIcon } from "@/components/layout/shop/cart-icon";
+import { CartIcon } from "@/components/layout/shop/cart/cart-icon";
 import { MainShop } from "@/components/layout/shop/main-shop";
-import { Modal } from "@/components/modal";
+import { ModalCart } from "@/components/modal-cart";
+import { ModalProduct } from "@/components/modal-product";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { emptyProduct, product } from "@/types/product";
 import { containerStyle } from "@/utils/container-style";
-import { faCartShopping, faFilter } from "@fortawesome/free-solid-svg-icons";
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
@@ -54,11 +55,12 @@ export default function Page() {
             </div>
          </div>
          <Footer />
-         <Modal
+         <ModalProduct
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             productModal={productModal}
          />
+         <ModalCart />
       </div>
    )
 }

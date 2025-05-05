@@ -3,7 +3,6 @@ import { product } from "@/types/product";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import { Button } from "./ui/button";
 import { useState } from "react";
 import { useCartStore } from "@/store/cart-store";
 
@@ -12,11 +11,11 @@ type props = {
    setIsOpen: (value: boolean) => void;
    productModal: product;
 }
-export const Modal = ({ isOpen, setIsOpen, productModal }: props) => {
+export const ModalProduct = ({ isOpen, setIsOpen, productModal }: props) => {
    const { cart, upsertCartItem } = useCartStore();
    const [quantity, setQuantity] = useState<number>(1);
 
-   function handleAddProduct(){
+   function handleAddProduct() {
       upsertCartItem(productModal, quantity);
       setQuantity(1);
       setIsOpen(false);
@@ -40,17 +39,16 @@ export const Modal = ({ isOpen, setIsOpen, productModal }: props) => {
                <p className="text-sm text-zinc-800">{productModal.description}</p>
                <div className="flex justify-between items-center mt-auto">
                   <div className="flex items-center gap-2 sm:gap-4">
-                     <FontAwesomeIcon icon={faMinus} className="p-2 border border-zinc-700 bg-zinc-300 transition shadow-md
+                     <FontAwesomeIcon icon={faMinus} className="p-2 border border-zinc-600 bg-zinc-300 transition shadow-md
                         hover:bg-[var(--primary)] rounded-lg cursor-pointer"
                         onClick={() => setQuantity((prev) => prev > 1 ? prev - 1 : prev)}
                      />
                      <p className="text-xl">{quantity}</p>
-                     <FontAwesomeIcon icon={faPlus} className="p-2 border border-zinc-700 bg-zinc-300 transition shadow-md
+                     <FontAwesomeIcon icon={faPlus} className="p-2 border border-zinc-600 bg-zinc-300 transition shadow-md
                         hover:bg-[var(--primary)] rounded-lg cursor-pointer"
                         onClick={() => setQuantity((prev) => prev + 1)}
                      />
                   </div>
-                  {/* <Button label="Adicionar" size={1} /> */}
                   <button className={`beforeBtn relative font-semibold bg-[var(--primary)] rounded-xl cursor-pointer 
                      flex items-center gap-4  overflow-hidden z-30 py-3 px-6 sm:py-4 sm:px-10 text-lg`}
                      onClick={handleAddProduct}

@@ -5,10 +5,13 @@ import { create } from "zustand";
 type CartStoreType = {
    cart: cart[];
    upsertCartItem: (product: product, quantity: number) => void;
+   isModalOpen: boolean;
+   setIsModalOpen: (newValue: boolean) => void;
 }
 
 export const useCartStore = create<CartStoreType>((set) => ({
    cart: [],
+   isModalOpen: false,
    upsertCartItem: (product: product, quantity: number) => set((state) => {
       let newCart = state.cart;
       let productIndex = newCart.findIndex((p) => p.product.id === product.id);
@@ -18,13 +21,14 @@ export const useCartStore = create<CartStoreType>((set) => ({
          productIndex = newCart.findIndex((p) => p.product.id === product.id);
       }
 
-      newCart[productIndex].quantity = quantity;
+      newCart[productIndex].quantity += quantity;
 
-      if(newCart[productIndex].quantity < 0){
+      if (newCart[productIndex].quantity <= 0) {
          newCart = newCart.filter((item) => item.product.id !== product.id)
       }
-      console.log("newCart: ",newCart)
+      console.log("newCart: ", newCart)
 
       return { cart: newCart };
-   })
+   }),
+   setIsModalOpen: (newValue: boolean) => set({ isModalOpen: newValue })
 }))
