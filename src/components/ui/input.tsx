@@ -1,7 +1,7 @@
 type InputProps = {
    type?: string;
    id: string;
-   placeholder?: string;
+   placeholder: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 export const Input = ({ type = "text", id, placeholder, ...rest }: InputProps) => {

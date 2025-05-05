@@ -1,4 +1,4 @@
-import { containerStyle } from "@/utils/container-style"
+import { containerStyle } from "@/utils/styles"
 import { SubtitleSection } from "../subititle-section"
 import { TitleSection } from "../title-section"
 import { Button } from "@/components/ui/button"

@@ -4,12 +4,13 @@ import { Header } from "@/components/layout/header";
 import { TitleSection } from "@/components/layout/home/title-section";
 import { AsideShop } from "@/components/layout/shop/aside-shop";
 import { CartIcon } from "@/components/layout/shop/cart/cart-icon";
+import { CheckoutModal } from "@/components/layout/shop/cart/chekcout-modal";
 import { MainShop } from "@/components/layout/shop/main-shop";
 import { ModalCart } from "@/components/modal-cart";
 import { ModalProduct } from "@/components/modal-product";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { emptyProduct, product } from "@/types/product";
-import { containerStyle } from "@/utils/container-style";
+import { containerStyle } from "@/utils/styles";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -61,6 +62,7 @@ export default function Page() {
             productModal={productModal}
          />
          <ModalCart />
+         <CheckoutModal />
       </div>
    )
 }

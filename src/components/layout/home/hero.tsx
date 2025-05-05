@@ -4,7 +4,7 @@ import { Button } from '../../ui/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { containerStyle } from '@/utils/container-style';
+import { containerStyle } from '@/utils/styles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

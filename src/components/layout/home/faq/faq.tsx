@@ -1,6 +1,6 @@
 "use client"
 import { faqData } from "@/data/faq"
-import { containerStyle } from "@/utils/container-style"
+import { containerStyle } from "@/utils/styles"
 import { FaqItem } from "./faq-item"
 import { SubtitleSection } from "../subititle-section"
 import { TitleSection } from "../title-section"

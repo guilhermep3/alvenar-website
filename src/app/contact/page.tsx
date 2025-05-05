@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { TitleSection } from "@/components/layout/home/title-section";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { Toast } from "@/components/ui/toast";
-import { containerStyle } from "@/utils/container-style";
+import { containerStyle } from "@/utils/styles";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Page() {

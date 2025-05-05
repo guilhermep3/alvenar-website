@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useState } from "react";
 import { useCartStore } from "@/store/cart-store";
+import { modalCloseStyle, modalOpenStyle, modalStyle } from "@/utils/styles";
 
 type props = {
    isOpen: boolean;
@@ -22,8 +23,7 @@ export const ModalProduct = ({ isOpen, setIsOpen, productModal }: props) => {
    };
 
    return (
-      <div className={`fixed inset-0 bg-black/50 z-50 flex justify-center items-center p-2 transition duration-300
-         ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+      <div className={`${modalStyle} ${isOpen ? `${modalOpenStyle}` : `${modalCloseStyle}`}`}
          onClick={() => setIsOpen(false)}
       >
          <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white text-black rounded-xl p-4 sm:p-6 z-[55]"

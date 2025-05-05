@@ -1,4 +1,4 @@
-import { containerStyle } from "@/utils/container-style"
+import { containerStyle } from "@/utils/styles"
 import { faFacebook, faInstagram, faLinkedin, faTiktok } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"

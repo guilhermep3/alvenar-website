@@ -3,19 +3,21 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { CartItem } from "./layout/shop/cart/cart-item";
 import { CartPrice } from "./layout/shop/cart/cart-price";
+import { CheckoutModal } from "./layout/shop/cart/chekcout-modal";
+import { modalCloseStyle, modalOpenStyle, modalStyle } from "@/utils/styles";
 
 type props = {
 }
 export const ModalCart = ({ }: props) => {
-   const { isModalOpen, setIsModalOpen } = useCartStore();
+   const { isModalOpen, setIsModalOpen, setIsCheckoutOpen } = useCartStore();
 
    function handleBuyProducts() {
-      setIsModalOpen(false);
+      setIsCheckoutOpen(true);
+      // setIsModalOpen(false);
    }
 
    return (
-      <div className={`fixed inset-0 bg-black/50 z-50 flex justify-center items-center p-2 transition duration-300
-         ${isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+      <div className={`${modalStyle} ${isModalOpen ? `${modalOpenStyle}` : `${modalCloseStyle}`}`}
          onClick={() => setIsModalOpen(false)}
       >
          <div className="absolute top-0 right-0 bottom-0 flex flex-col gap-6 w-3/4 sm:w-full sm:max-w-sm bg-white text-black p-4 sm:p-6 z-[55]"
