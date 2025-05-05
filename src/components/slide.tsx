@@ -36,7 +36,7 @@ export default function Slide() {
       >
          {ratingData.map((item) => (
             <SwiperSlide key={item.id} >
-               <div className="max-w-3xl mx-auto text-black bg-white p-4 sm:p-6 mb-6 sm:mb-10 shadow-lg rounded-xl">
+               <div className="max-w-3xl mx-auto text-black bg-white p-4 sm:p-6 mb-10 shadow-lg rounded-xl">
                   <p className="text-base sm:text-lg">"{item.assessment}"</p>
                   <div className="flex gap-3 sm:gap-6 mt-10">
                      <img src={`./persons/${item.img}`}
