@@ -33,7 +33,7 @@ export const FormContact = () => {
       }
    });
    const { register, handleSubmit, formState: { errors }, reset } = methods;
-   const [isOpen, setIsOpen] = useState(true);
+   const [isOpen, setIsOpen] = useState(false);
 
    function onSubmit(data: FormData) {
       setFormData(data)
@@ -47,6 +47,7 @@ export const FormContact = () => {
    }
 
    function handleCloseModal() {
+      setIsOpen(false);
       setFormData({
          name: '',
          email: '',
@@ -54,7 +55,6 @@ export const FormContact = () => {
          message: ''
       })
       reset();
-      setIsOpen(false);
    }
 
    return (
@@ -106,7 +106,7 @@ export const FormContact = () => {
                </button>
             </div>
          </form>
-         <ModalContact name={formData.name} isOpen={isOpen} setIsOpen={handleCloseModal} />
+         <ModalContact name={formData.name} email={formData.email} isOpen={isOpen} setIsOpen={handleCloseModal} />
       </FormProvider>
    )
 }

@@ -48,10 +48,10 @@ export function Hero() {
                   Bem-vindo à Alvenar Architecture, onde criatividade, precisão e sustentabilidade se unem para
                   projetar espaços excepcionais que inspiram, perduram e redefinem o futuro da arquitetura.
                </h2>
-               <Button 
+               <Button
                   label="Contato"
                   size={1}
-                  link="#"
+                  link="/contact"
                   icon={<FontAwesomeIcon icon={faArrowRight} />}
                />
                <div className='absolute right-10 bottom-10 sm:right-20 xl:right-32 flex items-center gap-4'>
