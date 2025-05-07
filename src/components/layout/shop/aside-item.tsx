@@ -6,7 +6,7 @@ type Props = {
 
 export const AsideItem = ({ label, checked = false, onChange }: Props) => {
    return (
-      <label className="flex items-center gap-2 py-2 px-4 cursor-pointer hover:bg-zinc-100 transition-colors">
+      <label className="flex items-center gap-2 py-2 px-4 cursor-pointer hover:bg-zinc-200 transition-colors">
          <input
             type="checkbox"
             checked={checked}

@@ -3,15 +3,23 @@ import { useState } from "react";
 import { AsideHeader } from "./aside-header";
 import { AsideItem } from "./aside-item";
 import { AsideCategory, AsidePrice } from "@/data/aside";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 type props = {
    selectedCategories: any;
    selectedPrices: any;
    setSelectedCategories: (val: string[]) => void;
    setSelectedPrices: (val: string[]) => void;
+   isMobile: boolean;
+   showAsideMobile?: boolean;
+   setShowAsideMobile: () => void;
 }
-export const AsideShop = ({selectedCategories, selectedPrices, setSelectedCategories, setSelectedPrices}: props) => {
-
+export const AsideShop = ({
+   selectedCategories, selectedPrices, setSelectedCategories, setSelectedPrices,
+   isMobile, showAsideMobile, setShowAsideMobile }: props) => {
+   console.log("isMobile: ", isMobile)
+   console.log("showAsideMobile: ", showAsideMobile)
    const toggleItem = (
       list: string[],
       setList: (val: string[]) => void,
@@ -26,7 +34,11 @@ export const AsideShop = ({selectedCategories, selectedPrices, setSelectedCatego
    };
 
    return (
-      <aside className="hidden lg:flex flex-col sticky top-0 h-screen w-72 border border-r-2 border-zinc-300">
+      <aside className={`flex flex-col h-screen border border-r-2 bg-zinc-100 border-zinc-300 transition duration-200
+         ${isMobile ? 'fixed left-0 right-0 z-[56] max-h-3/4 w-full overflow-y-scroll' : 'sticky top-0 w-72'}
+          ${isMobile ? (showAsideMobile ? '-translate-y-0' : 'translate-y-full') : ''}
+      `}>
+         <FontAwesomeIcon icon={faClose} size="lg" className="size-5 p-3 mr-auto cursor-pointer" onClick={setShowAsideMobile} />
          <div className="flex flex-col">
             <AsideHeader title="Categoria" />
             <div className="py-2">

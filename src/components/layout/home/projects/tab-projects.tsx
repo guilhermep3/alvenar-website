@@ -1,13 +1,13 @@
 "use client"
 import { architectureProjects, comercialProjects, interiorProjects, projectsByCategory } from "@/utils/category-projects";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TabItem } from "./tab-item";
 
 const buttons = ['Arquitetura', 'Interior', 'Comercial']
 
 export const TabProjects = () => {
    const [active, setActive] = useState<number>(0);
-   projectsByCategory()
+   projectsByCategory();
 
    return (
       <div className="flex flex-col items-center">

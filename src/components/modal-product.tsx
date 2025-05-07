@@ -1,6 +1,6 @@
 "use client"
 import { product } from "@/types/product";
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faClose, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useState } from "react";
@@ -26,10 +26,12 @@ export const ModalProduct = ({ isOpen, setIsOpen, productModal }: props) => {
       <div className={`${modalStyle} ${isOpen ? `${modalOpenStyle}` : `${modalCloseStyle}`}`}
          onClick={() => setIsOpen(false)}
       >
-         <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white text-black rounded-xl p-4 sm:p-6 z-[55]"
+         <div className="flex flex-col md:flex-row gap-4 w-full max-w-4xl bg-white text-black rounded-xl p-4 sm:p-6 z-[55]"
             onClick={(e) => e.stopPropagation()}
          >
-            <span className="absolute cursor-pointer p-1" onClick={() => setIsOpen(false)}>X</span>
+            <span className="absolute cursor-pointer p-1" onClick={() => setIsOpen(false)}>
+               <FontAwesomeIcon icon={faClose} size="1x" />
+            </span>
             <div className="w-full max-w-md max-h-md">
                <Image src={`/shop/${productModal.image}`} alt={productModal.image}
                   width={400} height={400} className="w-full h-full" />
@@ -38,6 +40,10 @@ export const ModalProduct = ({ isOpen, setIsOpen, productModal }: props) => {
                <p className="text-xl sm:text-2xl font-bold">{productModal.name}</p>
                <p className="text-sm text-zinc-800">{productModal.description}</p>
                <div className="flex justify-between items-center mt-auto">
+                  <p className="text-base sm:text-lg font-semibold">Preço:</p>
+                  <p className="text-lg sm:text-xl font-semibold">R${productModal.price}</p>
+               </div>
+               <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2 sm:gap-4">
                      <FontAwesomeIcon icon={faMinus} className="p-2 border border-zinc-600 bg-zinc-300 transition shadow-md
                         hover:bg-[var(--primary)] rounded-lg cursor-pointer"
