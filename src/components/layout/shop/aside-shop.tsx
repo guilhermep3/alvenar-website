@@ -38,7 +38,9 @@ export const AsideShop = ({
          ${isMobile ? 'fixed left-0 right-0 z-[56] max-h-3/4 w-full overflow-y-scroll' : 'sticky top-0 w-72'}
           ${isMobile ? (showAsideMobile ? '-translate-y-0' : 'translate-y-full') : ''}
       `}>
-         <FontAwesomeIcon icon={faClose} size="lg" className="size-5 p-3 mr-auto cursor-pointer" onClick={setShowAsideMobile} />
+         <div className="sm:hidden">
+            <FontAwesomeIcon icon={faClose} size="lg" className="size-5 p-3 mr-auto cursor-pointer" onClick={setShowAsideMobile} />
+         </div>
          <div className="flex flex-col">
             <AsideHeader title="Categoria" />
             <div className="py-2">
