@@ -24,9 +24,6 @@ export const Footer = () => {
                         <Link href={'/'}>Início</Link>
                      </li>
                      <li className="hover:underline w-fit">
-                        <Link href={'/about'}>Sobre</Link>
-                     </li>
-                     <li className="hover:underline w-fit">
                         <Link href={'/shop'}>Loja</Link>
                      </li>
                      <li className="hover:underline w-fit">
