@@ -1,5 +1,4 @@
 "use client"
-import { useState } from "react";
 import { AsideHeader } from "./aside-header";
 import { AsideItem } from "./aside-item";
 import { AsideCategory, AsidePrice } from "@/data/aside";
@@ -7,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 type props = {
-   selectedCategories: any;
-   selectedPrices: any;
+   selectedCategories: string[];
+   selectedPrices: string[];
    setSelectedCategories: (val: string[]) => void;
    setSelectedPrices: (val: string[]) => void;
    isMobile: boolean;
@@ -18,8 +17,6 @@ type props = {
 export const AsideShop = ({
    selectedCategories, selectedPrices, setSelectedCategories, setSelectedPrices,
    isMobile, showAsideMobile, setShowAsideMobile }: props) => {
-   console.log("isMobile: ", isMobile)
-   console.log("showAsideMobile: ", showAsideMobile)
    const toggleItem = (
       list: string[],
       setList: (val: string[]) => void,

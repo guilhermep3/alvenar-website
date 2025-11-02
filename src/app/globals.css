@@ -54,15 +54,26 @@ body {
   width: 100%;
 }
 
-.marquee{
-  animation: marquee 30s linear infinite;
+.marquee-container {
+  animation: marquee 40s linear infinite;
 }
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+}
+
 @keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
   to {
     transform: translateX(-100%);
   }
 }
-
 .cardProduct::before {
   content: '';
   position: absolute;
