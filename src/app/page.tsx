@@ -11,23 +11,28 @@ import { Products } from "@/components/layout/home/shop/products";
 import { Marquee } from "@/components/layout/marquee";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { BackTop } from "@/components/ui/back-top";
+import { DividerSVG } from "@/components/svg/divider";
 
 export default function Home() {
   return (
     <div className="relative">
       <Header />
-      <MobileNav/>
+      <MobileNav />
       <Hero />
       <About />
       <Services />
-      <Marquee/>
-      <Products/>
-      <Projects/>
-      <Rating/>
-      <Faq/>
-      <Local/>
-      <Footer/>
-      <BackTop/>
+      <div className="relative">
+        <DividerSVG top rotate offset />
+        <DividerSVG offset />
+        <Marquee />
+      </div>
+      <Products />
+      <Projects />
+      <Rating />
+      <Faq />
+      <Local />
+      <Footer />
+      <BackTop />
     </div>
   );
 }

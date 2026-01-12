@@ -1,10 +1,8 @@
-import { WoodenBand } from "../wooden-band"
+import { DividerSVG } from "../svg/divider"
 
 export const Marquee = () => {
   return (
-    <div className="relative w-full overflow-hidden bg-stone-400 py-10">
-      <WoodenBand height={'16px'} topOrBottom="top" />
-      <WoodenBand height={'16px'} topOrBottom="bottom" />
+    <div className="relative w-full overflow-hidden bg-stone-400 py-6">
       <div className="marquee-container flex w-full gap-7">
         <div className="marquee-content flex gap-7 text-black">
           <p className="text-2xl sm:text-4xl font-semibold">ALVENAR</p>
