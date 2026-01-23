@@ -1,6 +1,5 @@
-import { DividerSVG } from "../svg/divider"
-
 export const Marquee = () => {
+
   return (
     <div className="relative w-full overflow-hidden bg-stone-400 py-6">
       <div className="marquee-container flex w-full gap-7">

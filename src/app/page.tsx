@@ -22,8 +22,8 @@ export default function Home() {
       <About />
       <Services />
       <div className="relative">
-        <DividerSVG top rotate offset />
-        <DividerSVG offset />
+        <DividerSVG top rotate offsetTop />
+        <DividerSVG offsetBottom />
         <Marquee />
       </div>
       <Products />

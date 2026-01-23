@@ -10,7 +10,8 @@ export const Projects = () => {
     <section id="projects"
       className="relative bg-zinc-100 text-black py-20"
       >
-      <DividerSVG offset />
+      <DividerSVG rotate offsetTop />
+      <DividerSVG offsetBottom />
       <div className={`${containerStyle} flex flex-col gap-14`}>
         <div className="flex flex-col items-center gap-3 text-center">
           <SubtitleSection label="Projetos" className="text-black" />
